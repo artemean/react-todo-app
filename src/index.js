@@ -38,13 +38,15 @@ class App extends React.Component {
     console.log(this.state.todoList);
     return (
       <div className="App">
-        <input
-          placeholder="What needs to be done?"
-          ref={inp => {
-            this.inp = inp;
-          }}
-          onKeyDown={this.handleKeyDown}
-        />
+        <div className="add-field">
+          <input
+            placeholder="What needs to be done?"
+            ref={inp => {
+              this.inp = inp;
+            }}
+            onKeyDown={this.handleKeyDown}
+          />
+        </div>
         {this.state.todoList.length > 0 ? (
           <TodoList
             items={this.state.todoList}
@@ -59,7 +61,7 @@ class App extends React.Component {
 
 function TodoList({ items, removeTodo, toggleDone }) {
   return (
-    <ul>
+    <ul className="todos-list">
       {items.map(item => (
         <li>
           <input

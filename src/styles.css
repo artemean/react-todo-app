@@ -2,6 +2,30 @@
   font-family: sans-serif;
 }
 
+.add-field {
+  padding: 10px;
+  background: #ced;
+}
+
+.todos-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todos-list li {
+  border-top: 1px solid #999;
+  padding: 10px;
+}
+
+.todos-list li * {
+  vertical-align: middle;
+}
+
+.todos-list li:first-child {
+  border-top: 0;
+}
+
 .remove-icon {
   cursor: pointer;
   margin: 0 0 0 10px;
